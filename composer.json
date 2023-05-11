@@ -50,7 +50,7 @@
         "mailjetApiV3": {
             "type": "vcs",
             "url": "https://github.com/akki-team/mailjet-apiv3-php.git"
-        },
+        }
     },
     "config": {
         "bin-dir": "bin"
