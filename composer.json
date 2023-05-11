@@ -1,5 +1,5 @@
 {
-    "name": "mailjet/mailjet-bundle",
+    "name": "akki-team/mailjet-bundle",
     "description": "Symfony bundle for Mailjet API V3",
     "type": "symfony-bundle",
     "homepage": "https://github.com/mailjet/mailjetBundle",
