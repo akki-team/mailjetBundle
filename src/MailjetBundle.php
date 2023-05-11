@@ -7,7 +7,7 @@ use Mailjet\MailjetBundle\DependencyInjection\MailjetExtension;
 
 class MailjetBundle extends Bundle
 {
-    public function getContainerExtension()
+    public function getContainerExtension(): ?MailjetExtension
     {
         return new MailjetExtension();
     }
