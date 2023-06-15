@@ -15,18 +15,21 @@ class Contact
 
     const EMAIL_KEY = 'Email';
     const NAME_KEY = 'Name';
+    const EXCLUDED_KEY = 'IsExcludedFromCampaigns';
     const ACTION_KEY = 'Action';
     const PROPERTIES_KEY = 'Properties';
 
     protected $email;
     protected $name;
+    protected $excluded;
     protected $properties;
     protected $action;
 
-    public function __construct($email, $name = null, array $properties = [])
+    public function __construct($email, $name = null, array $properties = [], $excluded= null)
     {
         $this->email = $email;
         $this->name = $name;
+        $this->excluded = $excluded;
         $this->properties = $properties;
     }
 
@@ -42,6 +45,10 @@ class Contact
 
         if (!is_null($this->name)) {
             $result[self::NAME_KEY] = $this->name;
+        }
+
+        if (!is_null($this->excluded)) {
+            $result[self::EXCLUDED_KEY] = $this->excluded ? "true" : "false";
         }
 
         if (!is_null($this->action)) {
@@ -91,6 +98,25 @@ class Contact
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * Correspond to IsExcludedFromCampaigns in MailJet request
+     */
+    public function getExcluded()
+    {
+        return $this->excluded;
+    }
+
+    /**
+     * Set contact exclusion
+     * @param bool $excluded
+     * @return Contact
+     */
+    public function setExcluded($excluded)
+    {
+        $this->excluded = $excluded;
         return $this;
     }
 
