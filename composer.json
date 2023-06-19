@@ -31,7 +31,7 @@
     },
     "require": {
         "php": ">=7.1.3|^8.0",
-        "akki-team/mailjet-apiv3-php": "1.5.9",
+        "mailjet/mailjet-apiv3-php": "1.5.1",
         "mailjet/mailjet-swiftmailer": "^2.0",
         "symfony/config": "^4.4|^5.0|^6.0",
         "symfony/console": "^4.4|^5.0|^6.0",
@@ -45,12 +45,6 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^5.1|^6.0|^7.0"
-    },
-    "repositories": {
-        "mailjetApiV3": {
-            "type": "vcs",
-            "url": "https://github.com/akki-team/mailjet-apiv3-php.git"
-        }
     },
     "config": {
         "bin-dir": "bin"
